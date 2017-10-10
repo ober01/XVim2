@@ -321,6 +321,12 @@
         return nil;
 }
 
+// MARK: Alex
+- (XVimEvaluator*)SEMICOLON
+{
+    return nil;
+}
+
 - (XVimEvaluator*)C_LSQUAREBRACKET
 {
         return [self ESC];
