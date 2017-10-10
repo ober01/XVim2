@@ -368,12 +368,13 @@
 // JOIN
 #pragma mark - JOIN
 
-- (XVimEvaluator*)J
-{
-        XVimJoinEvaluator* eval = [[XVimJoinEvaluator alloc] initWithWindow:self.window addSpace:YES];
-        return [eval executeOperationWithMotion:XVIM_MAKE_MOTION(MOTION_NONE, CHARACTERWISE_EXCLUSIVE, MOTION_OPTION_NONE, self.numericArg)];
-}
-
+// MARK: Alex
+//- (XVimEvaluator*)J
+//{
+//        XVimJoinEvaluator* eval = [[XVimJoinEvaluator alloc] initWithWindow:self.window addSpace:YES];
+//        return [eval executeOperationWithMotion:XVIM_MAKE_MOTION(MOTION_NONE, CHARACTERWISE_EXCLUSIVE, MOTION_OPTION_NONE, self.numericArg)];
+//}
+//
 
 // SHIFT
 #pragma mark - SHIFT
