@@ -141,8 +141,10 @@
 
 // Helper Methods
 
+// MARK: Alex
 - (BOOL)clipboardHasUnnamed{
-    return [self.clipboard rangeOfString:@"unnamed"].location != NSNotFound;
+//    return [self.clipboard rangeOfString:@"unnamed"].location != NSNotFound;
+    return true;
 }
 
 @end
