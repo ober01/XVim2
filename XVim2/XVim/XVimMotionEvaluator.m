@@ -234,18 +234,21 @@
         return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_BACKWARD, CHARACTERWISE_EXCLUSIVE, LEFT_RIGHT_NOWRAP, [self numericArg])];
 }
 
+// MARK: Alex
 - (XVimEvaluator*)H
 {
-        return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_HOME, LINEWISE, MOTION_OPTION_NONE, [self numericArg])];
+    return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_BEGINNING_OF_LINE, CHARACTERWISE_EXCLUSIVE, MOTION_OPTION_NONE, [self numericArg])];
 }
 
 - (XVimEvaluator*)j
 {
         return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_LINE_FORWARD, LINEWISE, MOTION_OPTION_NONE, [self numericArg])];
 }
+
+// MARK: Alex
 - (XVimEvaluator*)J
 {
-        return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_LINE_FORWARD, LINEWISE, EXTEND_SELECTION, [self numericArg])];
+        return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_LINE_FORWARD, LINEWISE, MOTION_OPTION_NONE, 5)];
 }
 
 
@@ -253,9 +256,10 @@
 {
         return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_LINE_BACKWARD, LINEWISE, MOTION_OPTION_NONE, [self numericArg])];
 }
+// MARK: Alex
 - (XVimEvaluator*)K
 {
-        return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_LINE_BACKWARD, LINEWISE, EXTEND_SELECTION, [self numericArg])];
+        return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_LINE_BACKWARD, LINEWISE, EXTEND_SELECTION, 5)];
 }
 
 - (XVimEvaluator*)l
@@ -263,9 +267,10 @@
         return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_FORWARD, CHARACTERWISE_EXCLUSIVE, LEFT_RIGHT_NOWRAP, [self numericArg])];
 }
 
+// MARK: Alex
 - (XVimEvaluator*)L
 {
-        return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_BOTTOM, LINEWISE, MOTION_OPTION_NONE, [self numericArg])];
+    return [self _motionFixed:XVIM_MAKE_MOTION(MOTION_END_OF_LINE, CHARACTERWISE_EXCLUSIVE, MOTION_OPTION_NONE, [self numericArg])];
 }
 
 - (XVimEvaluator*)M
